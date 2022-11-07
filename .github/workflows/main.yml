@@ -7,7 +7,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'test actions'
-        run: pwd
-      - name: 'print hello'
-        run: echo hello
+      - name: 'list'
+        run: ls
+      - uses: actions/checkout@v3
+      - name: 'list'
+        run: ls
+        
