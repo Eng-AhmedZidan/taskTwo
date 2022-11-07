@@ -7,9 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: 'list'
-        run: ls
-      - uses: actions/checkout@v3
-      - name: 'list'
-        run: ls
-        
+      - uses: actions/checkout@v3 
+      - name: 'login to dockerhub'
+        run: docker login --username ${{ secrets.docker_username }} --password ${{ secrets.docker_token }}  
