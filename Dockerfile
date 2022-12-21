@@ -1,6 +1,2 @@
-FROM openjdk
-WORKDIR /task
-COPY task.java .
-RUN javac task.java
-CMD java task
-
+FROM httpd
+COPY . /usr/local/apache2/htdocs/
