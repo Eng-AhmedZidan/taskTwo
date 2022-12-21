@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v3 
       
       - name: 'login to dockerhub'
-        run: docker login --username ${{  secrets.docker_username  }} --password ${{ secrets.docker_token }}
+        run: docker login --username ${{ secrets.docker_username }} --password ${{ secrets.docker_token }}
       - name: 'build'
-        run: docker build -t ${{ secrets.docker_username }}/image .
+        run: docker build -t ${{ secrets.docker_username }}/webApp .
       - name: 'push'
-        run: docker push ${{ secrets.docker_username }}/image
+        run: docker push ${{ secrets.docker_username }}/webApp
